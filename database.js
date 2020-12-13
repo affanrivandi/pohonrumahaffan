@@ -13,7 +13,7 @@ var options = {
 };
 
 function getAllLocations(cb) {
-      DATABASE_PGB.any('SELECT ST_X(loc) as longitude, ST_Y(loc) as latitude from sma')
+      DATABASE_PGB.any('SELECT ST_X(loc) as longitude, ST_Y(loc) as latitude from pohon')
       .then(function (data) {
          cb(null, data);})
        .catch(function (err) {
